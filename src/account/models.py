@@ -41,7 +41,7 @@ class Account(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', ]
 
-    objectS = CustomAccountManager()
+    objects = CustomAccountManager()
 
     def __string__(self):
         return self.email
