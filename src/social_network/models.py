@@ -25,6 +25,21 @@ class Post(models.Model):
         return self.title
 
 
+class Like(models.Model):
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL,
+                              on_delete=models.CASCADE)
+    liked_post = models.ForeignKey(
+        'social_network.Post', on_delete=models.CASCADE)
+    date_liked = models.DateTimeField(
+        verbose_name='date liked', auto_now_add=True)
+
+    class Meta:
+        unique_together = ('owner', 'liked_post')
+
+    def __str__(self):
+        return f'{self.owner} on {self.liked_post}'
+
+
 @receiver(pre_save, sender=Post)
 def post_pre_save(sender, instance, **kwargs):
     if not instance.slug:

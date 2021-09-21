@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from social_network.models import Post
+from social_network.models import Post, Like
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -13,3 +13,10 @@ class PostSerializer(serializers.ModelSerializer):
 
     def get_post_author(self, post):
         return post.author.username
+
+
+class LikeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Like
+        fields = ()
