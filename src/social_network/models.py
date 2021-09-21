@@ -30,7 +30,7 @@ class Like(models.Model):
                               on_delete=models.CASCADE)
     liked_post = models.ForeignKey(
         'social_network.Post', on_delete=models.CASCADE)
-    date_liked = models.DateTimeField(
+    date_liked = models.DateField(
         verbose_name='date liked', auto_now_add=True)
 
     class Meta:
