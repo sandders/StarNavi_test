@@ -4,6 +4,6 @@ from analytics.views import like_analytics_view, UserActivityAnalyticsRetrieveAP
 
 urlpatterns = [
     path('likes', like_analytics_view, name='api-analytics-likes'),
-    path('user_activity/<username>', UserActivityAnalyticsRetrieveAPIView.as_view(),
+    path('user_activity', UserActivityAnalyticsRetrieveAPIView.as_view(),
          name='api-analytics-user-activity')
 ]

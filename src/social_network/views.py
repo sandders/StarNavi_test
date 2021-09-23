@@ -1,15 +1,10 @@
 from django.db import IntegrityError
 
-from rest_framework import status
-from rest_framework.decorators import api_view, permission_classes
 from rest_framework.exceptions import NotFound, ValidationError
 from rest_framework.generics import (
     ListCreateAPIView, RetrieveUpdateDestroyAPIView, GenericAPIView)
 from rest_framework.mixins import CreateModelMixin, DestroyModelMixin
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
-from rest_framework.response import Response
-
-from account.models import Account
 
 from social_network.models import Post, Like
 from social_network.paginators import PostPaginator

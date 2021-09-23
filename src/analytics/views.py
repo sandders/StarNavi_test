@@ -1,13 +1,12 @@
-from collections import OrderedDict
 from datetime import datetime, date
 
 from django.db.models import Count
-from django.db.models.functions import TruncDay, Cast
+from django.db.models.functions import TruncDay
 
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.filters import SearchFilter
-from rest_framework.generics import RetrieveAPIView
+from rest_framework.generics import ListAPIView
 from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 
@@ -28,7 +27,8 @@ def like_analytics_view(request):
     try:
         date_from_obj = datetime.strptime(date_from, r'%Y-%m-%d')
     except ValueError:
-        return Response({'date_from': 'Invalid date format, use YYYY-MM-DD'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'date_from': 'Invalid date format, use YYYY-MM-DD'},
+                        status=status.HTTP_400_BAD_REQUEST)
 
     date_to = request.query_params.get(
         'date_to', datetime.strftime(date.today(), r'%Y-%m-%d'))
@@ -36,10 +36,12 @@ def like_analytics_view(request):
     try:
         date_to_obj = datetime.strptime(date_to, r'%Y-%m-%d')
     except ValueError:
-        return Response({'date_to': 'Invalid date format, use YYYY-MM-DD'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'date_to': 'Invalid date format, use YYYY-MM-DD'},
+                        status=status.HTTP_400_BAD_REQUEST)
 
     if date_from_obj > date_to_obj:
-        return Response({'detail': 'date_from can not be greater than date_to'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'detail': 'date_from can not be greater than date_to'},
+                        status=status.HTTP_400_BAD_REQUEST)
 
     likes_for_period = Like.objects.filter(
         date_liked__range=[date_from, date_to])
@@ -61,23 +63,9 @@ def like_analytics_view(request):
     return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
-class UserActivityAnalyticsRetrieveAPIView(RetrieveAPIView):
+class UserActivityAnalyticsRetrieveAPIView(ListAPIView):
     queryset = Account.objects.all()
     serializer_class = UserAnayticsSerializer
     permission_classes = [IsAdminUser, ]
-    lookup_field = 'username'
-
-    def retrieve(self, request, *args, **kwargs):
-        instance = self.get_object()
-        serializer = self.get_serializer(instance)
-        a = serializer.data
-        return Response(a)
-
-    def get_serializer(self, *args, **kwargs):
-        """
-        Return the serializer instance that should be used for validating and
-        deserializing input, and for serializing output.
-        """
-        serializer_class = self.get_serializer_class()
-        kwargs.setdefault('context', self.get_serializer_context())
-        return serializer_class(*args, **kwargs)
+    filter_backends = [SearchFilter]
+    search_fields = ['=username', '=email']
