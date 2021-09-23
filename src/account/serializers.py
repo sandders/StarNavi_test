@@ -1,3 +1,5 @@
+from django.utils.timezone import now
+
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer, TokenRefreshSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -36,5 +38,6 @@ class LoginTokenObtainSerializer(TokenObtainPairSerializer):
 
     def validate(self, attrs):
         data = super().validate(attrs)
-        self.user.save()  # save user to update last_login field
+        self.user.last_login = now()
+        self.user.save(update_fields=['last_login'])
         return data

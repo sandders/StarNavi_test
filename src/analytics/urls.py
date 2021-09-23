@@ -1,7 +1,9 @@
 from django.urls import path
 
-from analytics.views import like_analytics_view
+from analytics.views import like_analytics_view, UserActivityAnalyticsRetrieveAPIView
 
 urlpatterns = [
     path('likes', like_analytics_view, name='api-analytics-likes'),
+    path('user_activity/<username>', UserActivityAnalyticsRetrieveAPIView.as_view(),
+         name='api-analytics-user-activity')
 ]

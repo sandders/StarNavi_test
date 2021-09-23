@@ -1,5 +1,5 @@
-from rest_framework import serializers
 from social_network.models import Post, Like
+from rest_framework import serializers
 
 
 class PostSerializer(serializers.ModelSerializer):

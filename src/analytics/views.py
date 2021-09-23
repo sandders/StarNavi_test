@@ -6,16 +6,23 @@ from django.db.models.functions import TruncDay, Cast
 
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
+from rest_framework.filters import SearchFilter
+from rest_framework.generics import RetrieveAPIView
 from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 
-from analytics.serializers import LikeAnlyticsSerializer
+from analytics.serializers import LikeAnlyticsSerializer, UserAnayticsSerializer
+
+from account.models import Account
 from social_network.models import Like
 
 
 @api_view(['GET', ])
 @permission_classes([IsAdminUser])
 def like_analytics_view(request):
+    ''' I have decided to use function-based view here
+    because we need a lot of custom functionality
+    '''
     date_from = request.query_params.get('date_from', '')
 
     try:
@@ -52,3 +59,25 @@ def like_analytics_view(request):
         }
         return Response(data=new_data)
     return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+class UserActivityAnalyticsRetrieveAPIView(RetrieveAPIView):
+    queryset = Account.objects.all()
+    serializer_class = UserAnayticsSerializer
+    permission_classes = [IsAdminUser, ]
+    lookup_field = 'username'
+
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        a = serializer.data
+        return Response(a)
+
+    def get_serializer(self, *args, **kwargs):
+        """
+        Return the serializer instance that should be used for validating and
+        deserializing input, and for serializing output.
+        """
+        serializer_class = self.get_serializer_class()
+        kwargs.setdefault('context', self.get_serializer_context())
+        return serializer_class(*args, **kwargs)
