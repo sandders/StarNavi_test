@@ -59,7 +59,7 @@ class LikeCreateDestroyAPIView(CreateModelMixin,
                                DestroyModelMixin,
                                GenericAPIView):
     serializer_class = LikeSerializer
-    permission_classes([IsAuthenticated])
+    permission_classes = [IsAuthenticated]
 
     def get_object(self):
         owner = self.request.user

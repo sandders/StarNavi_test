@@ -1,0 +1,500 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "StarNavi Test Task",
+    "dateExported": "2021-09-23T16:15:53.045Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/account/token/refresh",
+            "url": "http://127.0.0.1:8000/api/account/token/refresh",
+            "method": "POST",
+            "modified": "2021-09-20T21:54:00.188Z",
+            "created": "2021-09-20T19:09:24.008Z",
+            "_id": "335df03b-e61c-4e22-89aa-fac8ded7b755",
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "refresh",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzMzQ2MDUyOCwianRpIjoiM2UzYjYyYjhlYWM4NDFlMzg1YTlkODNkY2I1NmE1MzIiLCJ1c2VyX2lkIjoxfQ.hFSXVLq1K5C_tFh4sa9PQAuHwq8eZq1-pl7Fz0ybp9w"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 30000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/analytics/user_activity?search=user2",
+            "url": "http://127.0.0.1:8000/api/analytics/user_activity?search=user2",
+            "method": "GET",
+            "modified": "2021-09-23T15:56:11.422Z",
+            "created": "2021-09-23T14:16:11.126Z",
+            "_id": "fc9ab7c8-4bbc-49fe-9fd2-ff71efeceb70",
+            "params": [{ "name": "search", "value": "user2", "isPath": false }],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNzAyNDUzLCJqdGkiOiJlNWZkNDI3ZTlhZTI0YmIwYjk1MTVmMzM1MjFhMWEyNyIsInVzZXJfaWQiOjF9.X6yz5LCM8DIeOcFMY4_ryj--g3jB00J6icie1NkSxno"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 40000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/posts/alex-first-post",
+            "url": "http://127.0.0.1:8000/api/posts/alex-first-post",
+            "method": "PUT",
+            "modified": "2021-09-23T15:57:08.012Z",
+            "created": "2021-09-20T21:23:42.566Z",
+            "_id": "ac63f8f4-4490-489f-b24c-f89d3ca8dc69",
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    { "name": "title", "value": "NOT Alex's first post" },
+                    {
+                        "name": "content",
+                        "value": "lsd;kshdgkhdsflkfgh",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNDcwNzYwLCJqdGkiOiJjNzRhN2NlYzlhNzY0YWQ3OGNlNjJjYjAwYzI2ZGNhYyIsInVzZXJfaWQiOjF9.oavuyylheqM4P6gCKaZf6w_qQF-ZpKbnkqUKFtpqnW8"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 50000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/posts/alex-first-post",
+            "url": "http://127.0.0.1:8000/api/posts/alex-first-post",
+            "method": "PATCH",
+            "modified": "2021-09-23T15:57:29.994Z",
+            "created": "2021-09-20T22:01:27.358Z",
+            "_id": "ba3ab3b2-9cfe-4ecb-836c-643b9478a6ce",
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    { "name": "title", "value": "NOT Alex's first post" },
+                    {
+                        "name": "content",
+                        "value": "lsd;kshdgkhdsflkfgh",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNDcwNzYwLCJqdGkiOiJjNzRhN2NlYzlhNzY0YWQ3OGNlNjJjYjAwYzI2ZGNhYyIsInVzZXJfaWQiOjF9.oavuyylheqM4P6gCKaZf6w_qQF-ZpKbnkqUKFtpqnW8"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 60000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/posts/alex-first-post/like",
+            "url": "http://127.0.0.1:8000/api/posts/alex-first-post/like",
+            "method": "POST",
+            "modified": "2021-09-23T15:57:40.074Z",
+            "created": "2021-09-20T23:26:57.192Z",
+            "_id": "66694953-0f6d-4a95-9bba-6e31ec669d0a",
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNDcwNzYwLCJqdGkiOiJjNzRhN2NlYzlhNzY0YWQ3OGNlNjJjYjAwYzI2ZGNhYyIsInVzZXJfaWQiOjF9.oavuyylheqM4P6gCKaZf6w_qQF-ZpKbnkqUKFtpqnW8"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 70000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/posts/",
+            "url": "http://127.0.0.1:8000/api/posts/",
+            "method": "POST",
+            "modified": "2021-09-23T16:09:12.735Z",
+            "created": "2021-09-17T22:00:07.044Z",
+            "_id": "538f5a5b-9bee-4e60-8fd9-68e4497970cd",
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Title if first post dfgdsfgdfg"
+                    },
+                    { "name": "content", "value": "Content 1 fdgsdfg" },
+                    { "name": "author", "value": "alex", "isDisabled": true }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNDY1NTE4LCJqdGkiOiI5Njg3YTNiYjdlZTU0MWFlOTk2Mzk2NmM5NWQxMTQ0ZiIsInVzZXJfaWQiOjN9.DSKnaDZprqxncE2vMh0BSqCFFcjlr_31OUEuN5MZ4cM"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 80000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/posts/alex-first-post/like",
+            "url": "http://127.0.0.1:8000/api/posts/alex-first-post/like",
+            "method": "DELETE",
+            "modified": "2021-09-23T15:58:10.736Z",
+            "created": "2021-09-21T15:54:18.936Z",
+            "_id": "76d430c0-45db-48f8-bac9-fedf99368051",
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNDcwNzYwLCJqdGkiOiJjNzRhN2NlYzlhNzY0YWQ3OGNlNjJjYjAwYzI2ZGNhYyIsInVzZXJfaWQiOjF9.oavuyylheqM4P6gCKaZf6w_qQF-ZpKbnkqUKFtpqnW8"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 90000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/posts/alex-first-post",
+            "url": "http://127.0.0.1:8000/api/posts/alex-first-post",
+            "method": "DELETE",
+            "modified": "2021-09-23T15:58:18.447Z",
+            "created": "2021-09-20T22:06:35.139Z",
+            "_id": "57262e68-26f8-418c-9e20-50606e2e6ad2",
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "NOT Alex's first post",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "content",
+                        "value": "lsd;kshdgkhdsflkfgh",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNDcwNzYwLCJqdGkiOiJjNzRhN2NlYzlhNzY0YWQ3OGNlNjJjYjAwYzI2ZGNhYyIsInVzZXJfaWQiOjF9.oavuyylheqM4P6gCKaZf6w_qQF-ZpKbnkqUKFtpqnW8"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 100000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/analytics/likes",
+            "url": "http://127.0.0.1:8000/api/analytics/likes",
+            "method": "GET",
+            "modified": "2021-09-23T16:04:53.650Z",
+            "created": "2021-09-21T17:37:34.411Z",
+            "_id": "f477bd83-c3e2-42ca-aaef-56751c7b1ad1",
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNzAyNDUzLCJqdGkiOiJlNWZkNDI3ZTlhZTI0YmIwYjk1MTVmMzM1MjFhMWEyNyIsInVzZXJfaWQiOjF9.X6yz5LCM8DIeOcFMY4_ryj--g3jB00J6icie1NkSxno"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 110000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/analytics/likes?date_from=2020-02-02&date_to=2020-02-15",
+            "url": "http://127.0.0.1:8000/api/analytics/likes?date_from=2020-02-02&date_to=2020-02-15",
+            "method": "GET",
+            "modified": "2021-09-23T16:03:41.514Z",
+            "created": "2021-09-21T17:39:10.483Z",
+            "_id": "633d0105-f0be-459c-b1ba-358a888b18cd",
+            "params": [
+                { "name": "date_from", "value": "2020-02-02", "isPath": false },
+                { "name": "date_to", "value": "2020-02-15", "isPath": false }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNzAyNDUzLCJqdGkiOiJlNWZkNDI3ZTlhZTI0YmIwYjk1MTVmMzM1MjFhMWEyNyIsInVzZXJfaWQiOjF9.X6yz5LCM8DIeOcFMY4_ryj--g3jB00J6icie1NkSxno"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 120000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/analytics/likes?date_from=2020-02-02",
+            "url": "http://127.0.0.1:8000/api/analytics/likes?date_from=2020-02-02",
+            "method": "GET",
+            "modified": "2021-09-23T16:03:53.339Z",
+            "created": "2021-09-21T19:43:54.293Z",
+            "_id": "60c148f6-003c-406e-b6d6-417744808bf5",
+            "params": [
+                { "name": "date_from", "value": "2020-02-02", "isPath": false }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNzAyNDUzLCJqdGkiOiJlNWZkNDI3ZTlhZTI0YmIwYjk1MTVmMzM1MjFhMWEyNyIsInVzZXJfaWQiOjF9.X6yz5LCM8DIeOcFMY4_ryj--g3jB00J6icie1NkSxno"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 130000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/account/register",
+            "url": "http://127.0.0.1:8000/api/account/register",
+            "method": "POST",
+            "modified": "2021-09-23T16:00:01.742Z",
+            "created": "2021-09-20T20:13:40.726Z",
+            "_id": "355a0aaa-bb88-4656-b806-99f13361a673",
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    { "name": "email", "value": "user4@gmail.com" },
+                    { "name": "username", "value": "user4" },
+                    { "name": "password", "value": "password" },
+                    { "name": "password2", "value": "password" }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 150000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/account/token/login",
+            "url": "http://127.0.0.1:8000/api/account/token/login",
+            "method": "POST",
+            "modified": "2021-09-23T16:00:29.120Z",
+            "created": "2021-09-17T23:55:30.000Z",
+            "_id": "089f5ca6-0bf8-487d-9364-831eee07bacd",
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    { "name": "email", "value": "khaustovych.alex@gmail.com" },
+                    { "name": "password", "value": "password" }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 170000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/analytics/user_activity",
+            "url": "http://127.0.0.1:8000/api/analytics/user_activity",
+            "method": "GET",
+            "modified": "2021-09-23T16:02:07.999Z",
+            "created": "2021-09-23T14:14:53.036Z",
+            "_id": "08b23229-cfb1-4f8e-84e0-5c74a2ac26a7",
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNzAyNDUzLCJqdGkiOiJlNWZkNDI3ZTlhZTI0YmIwYjk1MTVmMzM1MjFhMWEyNyIsInVzZXJfaWQiOjF9.X6yz5LCM8DIeOcFMY4_ryj--g3jB00J6icie1NkSxno"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 180000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/analytics/user_activity?search=alex",
+            "url": "http://127.0.0.1:8000/api/analytics/user_activity?search=alex",
+            "method": "GET",
+            "modified": "2021-09-23T16:02:31.780Z",
+            "created": "2021-09-23T14:14:53.036Z",
+            "_id": "b0f156ef-c5a5-47bd-97c8-8ce5f5ffa8d0",
+            "params": [{ "name": "search", "value": "alex", "isPath": false }],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNzAyNDUzLCJqdGkiOiJlNWZkNDI3ZTlhZTI0YmIwYjk1MTVmMzM1MjFhMWEyNyIsInVzZXJfaWQiOjF9.X6yz5LCM8DIeOcFMY4_ryj--g3jB00J6icie1NkSxno"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 190000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/analytics/user_activity?search=user2@gmail.com",
+            "url": "http://127.0.0.1:8000/api/analytics/user_activity?search=user2@gmail.com",
+            "method": "GET",
+            "modified": "2021-09-23T16:02:56.588Z",
+            "created": "2021-09-23T14:14:53.036Z",
+            "_id": "adf325f1-13cd-44d4-8880-4c8ce13df6de",
+            "params": [
+                {
+                    "name": "search",
+                    "value": "user2@gmail.com",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzNzAyNDUzLCJqdGkiOiJlNWZkNDI3ZTlhZTI0YmIwYjk1MTVmMzM1MjFhMWEyNyIsInVzZXJfaWQiOjF9.X6yz5LCM8DIeOcFMY4_ryj--g3jB00J6icie1NkSxno"
+            },
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 200000,
+            "headers": [
+                { "name": "Accept", "value": "*/*" },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.io)"
+                }
+            ],
+            "colId": "84c6d01f-aab9-4163-bfea-9ffaf4351b32",
+            "name": "http://127.0.0.1:8000/api/posts/",
+            "url": "http://127.0.0.1:8000/api/posts/",
+            "method": "GET",
+            "modified": "2021-09-23T16:09:57.594Z",
+            "created": "2021-09-20T19:43:07.421Z",
+            "_id": "cc1035d3-02fa-472c-80ed-e70470d9507c",
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    { "name": "page", "value": "2" },
+                    { "name": "page_size", "value": "2" }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}
